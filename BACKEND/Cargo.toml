@@ -1,0 +1,29 @@
+[package]
+name = "BACKEND"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+argon2 = "0.5.1"  #A secure password hashing library.
+async-trait = "0.1.72"   #
+chrono = { version = "0.4.26", features = ["serde"] }   #A date and time library, used with serde for working with time formats.
+dotenv = "0.15.0"   #For managing environment variables in development.
+jsonwebtoken = "9.2.0"   #A library for encoding and decoding JSON Web Tokens (JWT) for authentication.
+serde = { version = "1.0.183", features = ["derive"] }   #A framework for serializing and deserializing Rust data structures efficiently, used with JSON data.
+serde_json = "1.0.104"   #A framework for serializing and deserializing Rust data structures efficiently, used with JSON data.
+sqlx = { version = "0.8.1", features = ["runtime-async-std-native-tls", "postgres", "chrono", "uuid"] }   #n asynchronous, compile-time verified SQL crate supporting multiple databases (in this case, PostgreSQL).
+uuid = { version = "1.4.1", features = ["serde", "v4"] }   #A library for generating and parsing universally unique identifiers (UUIDs).
+validator = { version = "0.16.1", features = ["derive"] }   #A validation framework for input validation in Rust.
+axum = { version = "0.7.6", features = ["multipart"]}   #
+axum-extra = { version = "0.9.3", features = ["cookie"]}   #Additional utilities for Axum, including cookie support.
+tokio = { version = "1.39.3", features = ["full"] }   #An asynchronous runtime for Rust, powering the non-blocking operations.
+tokio-cron-scheduler = "0.13.0"   #A scheduler library for running tasks periodically based on cron-like expressions.
+tower = "0.5.0"   #Middleware and utilities for building robust HTTP services, including CORS and tracing support.
+time = "0.3.20"   #
+tower-http = { version = "0.5.2", features = ["cors","trace"] }   #Middleware and utilities for building robust HTTP services, including CORS and tracing support.
+tracing-subscriber = { version = "0.3.18"}   # A logging library for Rust applications, providing structured logging.
+aes = "0.7"   #Libraries for Advanced Encryption Standard (AES) encryption.
+block-modes = "0.8"   #Libraries for Advanced Encryption Standard (AES) encryption.
+rsa = "0.9"   #A library for RSA encryption and decryption.
+rand = "0.8"   #A library for generating random values, used in cryptography and token generation.
+base64 = "0.22.1"   #A library for encoding and decoding Base64, often used in file and cryptographic operations.
